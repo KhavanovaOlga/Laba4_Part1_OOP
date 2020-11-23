@@ -28,10 +28,90 @@ namespace Laba4_OOP_CCircle
             Coord_label.Text = "";
         }
 
+        static int amtCells = 1;
+        int CountElem = 0;
+        int item = 0;
+        static readonly Color DefaultColor = Color.Aquamarine;
+        static readonly Color SelectedColor = Color.DarkBlue;
+        myStorage storage = new myStorage(amtCells);
+
         private void Clear_button_Click(object sender, EventArgs e)
         {
             Circle_Panel.Refresh();
+            for (int i=0; i<amtCells; ++i)
+                if (!storage.Empty(i))
+                {
+                    storage.objects[i].Is_Drawn = false;
+                    storage.objects[i].color = DefaultColor;
+                }
         }
+
+        private void Del_button_Click(object sender, EventArgs e)
+        {
+            if (storage.OccupiedCells(amtCells) != 0)
+                for (int i = 0; i < amtCells; ++i)
+                    if (storage.Empty(i) == false && storage.objects[i].color == SelectedColor)
+                        storage.DeleteObj(ref i);
+            Clear_button_Click(sender, e);
+            ShowCircle_button_Click(sender, e);
+        }
+
+        private void СlearStorage_button_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < amtCells; ++i)
+                storage.DeleteObj(ref i);
+            CountElem = 0;
+        }
+
+
+        private void ShowCircle_button_Click(object sender, EventArgs e)
+        {
+            Circle_Panel.Refresh();
+            if (storage.OccupiedCells(amtCells)!=0)
+                for (int i=0; i<amtCells; ++i)
+                {
+                    DrawingCircles(ref storage, i);
+                    if (!storage.Empty(i))
+                        storage.objects[i].Is_Drawn = true;
+                }
+
+        }
+
+        private void DrawingCircles (ref myStorage storage, int CountElem)
+        {
+            if (storage.objects[CountElem]!=null)
+            {
+                Pen pen = new Pen(storage.objects[CountElem].color, 3);
+                Circle_Panel.CreateGraphics().DrawEllipse(pen, storage.objects[CountElem].x,
+                    storage.objects[CountElem].y, storage.objects[CountElem].R * 2, storage.objects[CountElem].R * 2);
+            }
+        }
+
+        private void SelectionRemove(ref myStorage storage)
+        {
+            for (int i=0; i<amtCells; ++i)
+                if (!storage.Empty(i))
+                {
+                    storage.objects[i].color = DefaultColor;
+                    if (storage.objects[i].Is_Drawn == true)
+                        DrawingCircles(ref storage, i);
+                }
+        }
+
+        private int CheckCircle(ref myStorage storage, int Size, int x, int y)
+        {
+            if (storage.OccupiedCells(Size)!=0)
+            {
+                for (int i=0; i< Size; ++i)
+                    if (!storage.Empty(i))
+                    {
+                        if (Math.Sqrt((x - storage.objects[i].x) + (y - storage.objects[i].y)) <= storage.objects[i].R)
+                            return i;
+                    }
+            }
+            return -1;
+        }
+
 
         public class CCircle
         {
@@ -119,6 +199,5 @@ namespace Laba4_OOP_CCircle
 
             ~myStorage() { }
         };
-    
     }
 }

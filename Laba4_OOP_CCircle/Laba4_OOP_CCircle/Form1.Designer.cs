@@ -73,6 +73,7 @@ namespace Laba4_OOP_CCircle
             this.Del_button.TabIndex = 3;
             this.Del_button.Text = "Удалить объекты";
             this.Del_button.UseVisualStyleBackColor = true;
+            this.Del_button.Click += new System.EventHandler(this.Del_button_Click);
             // 
             // СlearStorage_button
             // 
@@ -82,6 +83,7 @@ namespace Laba4_OOP_CCircle
             this.СlearStorage_button.TabIndex = 4;
             this.СlearStorage_button.Text = "Очистить хранилище";
             this.СlearStorage_button.UseVisualStyleBackColor = true;
+            this.СlearStorage_button.Click += new System.EventHandler(this.СlearStorage_button_Click);
             // 
             // ShowCircle_button
             // 
@@ -91,6 +93,7 @@ namespace Laba4_OOP_CCircle
             this.ShowCircle_button.TabIndex = 5;
             this.ShowCircle_button.Text = "Показать объекты хранилища";
             this.ShowCircle_button.UseVisualStyleBackColor = true;
+            this.ShowCircle_button.Click += new System.EventHandler(this.ShowCircle_button_Click);
             // 
             // MainForm
             // 
