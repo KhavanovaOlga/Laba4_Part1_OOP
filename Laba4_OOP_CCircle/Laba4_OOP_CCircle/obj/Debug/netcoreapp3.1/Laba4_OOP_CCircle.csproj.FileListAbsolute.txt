@@ -1,0 +1,15 @@
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\bin\Debug\netcoreapp3.1\Laba4_OOP_CCircle.exe
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\bin\Debug\netcoreapp3.1\Laba4_OOP_CCircle.deps.json
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\bin\Debug\netcoreapp3.1\Laba4_OOP_CCircle.runtimeconfig.json
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\bin\Debug\netcoreapp3.1\Laba4_OOP_CCircle.runtimeconfig.dev.json
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\bin\Debug\netcoreapp3.1\Laba4_OOP_CCircle.dll
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\bin\Debug\netcoreapp3.1\Laba4_OOP_CCircle.pdb
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\obj\Debug\netcoreapp3.1\Laba4_OOP_CCircle.csprojAssemblyReference.cache
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\obj\Debug\netcoreapp3.1\Laba4_OOP_CCircle.MainForm.resources
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\obj\Debug\netcoreapp3.1\Laba4_OOP_CCircle.csproj.GenerateResource.cache
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\obj\Debug\netcoreapp3.1\Laba4_OOP_CCircle.AssemblyInfoInputs.cache
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\obj\Debug\netcoreapp3.1\Laba4_OOP_CCircle.AssemblyInfo.cs
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\obj\Debug\netcoreapp3.1\Laba4_OOP_CCircle.csproj.CoreCompileInputs.cache
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\obj\Debug\netcoreapp3.1\Laba4_OOP_CCircle.dll
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\obj\Debug\netcoreapp3.1\Laba4_OOP_CCircle.pdb
+C:\Users\79373\Desktop\Laba4_OOP_part1\Laba4_OOP_CCircle\Laba4_OOP_CCircle\obj\Debug\netcoreapp3.1\Laba4_OOP_CCircle.genruntimeconfig.cache

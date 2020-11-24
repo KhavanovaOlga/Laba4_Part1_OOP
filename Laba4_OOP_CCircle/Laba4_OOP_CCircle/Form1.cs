@@ -112,6 +112,59 @@ namespace Laba4_OOP_CCircle
             return -1;
         }
 
+        private void Circle_Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            CCircle circle = new CCircle(e.X, e.Y, DefaultColor);
+
+            int SellectedItem = CheckCircle(ref storage, amtCells, circle.x, circle.y);
+            if (SellectedItem != -1)
+            {
+                if (Control.ModifierKeys == Keys.Control)
+
+                {
+                    int x = e.X - circle.R;
+                    int y = e.Y - circle.R;
+                    for (int i=0; i<amtCells; ++i)
+                        if (!storage.Empty(i))
+                        {
+                            if (Math.Sqrt((x - storage.objects[i].x) + (y - storage.objects[i].y)) <= storage.objects[i].R)
+                            {
+                                storage.objects[i].color = SelectedColor;
+                                DrawingCircles(ref storage, i);
+                            }
+                        }
+                }
+                else
+                {
+                    int x = e.X - circle.R;
+                    int y = e.Y - circle.R;
+                    SelectionRemove(ref storage);
+                    for (int i=0; i<amtCells; ++i)
+                        if(!storage.Empty(i))
+                        {
+                            if (Math.Sqrt((x - storage.objects[i].x) + (y - storage.objects[i].y)) <= storage.objects[i].R)
+                            {
+                                storage.objects[i].color = SelectedColor;
+                                DrawingCircles(ref storage, i);
+                                break;
+                            }
+                        }
+
+                    storage.objects[SellectedItem].color = SelectedColor;
+                    DrawingCircles(ref storage, SellectedItem);
+
+                }
+
+                return;
+            }
+
+            storage.AddObj(CountElem, ref circle, ref amtCells, ref item);
+            SelectionRemove(ref storage);
+            storage.objects[item].color = SelectedColor;
+            DrawingCircles(ref storage, item);
+            ++CountElem;
+        }
+
 
         public class CCircle
         {

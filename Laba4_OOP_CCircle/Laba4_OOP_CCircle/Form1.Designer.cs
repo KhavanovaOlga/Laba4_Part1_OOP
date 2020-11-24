@@ -44,6 +44,7 @@ namespace Laba4_OOP_CCircle
             this.Circle_Panel.Name = "Circle_Panel";
             this.Circle_Panel.Size = new System.Drawing.Size(1327, 553);
             this.Circle_Panel.TabIndex = 0;
+            this.Circle_Panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Circle_Panel_MouseDown);
             this.Circle_Panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Circle_Panel_MouseMove);
             // 
             // Coord_label
