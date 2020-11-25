@@ -31,8 +31,8 @@ namespace Laba4_OOP_CCircle
         static int amtCells = 1;
         int CountElem = 0;
         int item = 0;
-        static readonly Color DefaultColor = Color.Aquamarine;
-        static readonly Color SelectedColor = Color.DarkBlue;
+        static readonly Color DefaultColor = Color.White;
+        static readonly Color SelectedColor = Color.Red;
         myStorage storage = new myStorage(amtCells);
 
         private void Clear_button_Click(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace Laba4_OOP_CCircle
                 for (int i=0; i< Size; ++i)
                     if (!storage.Empty(i))
                     {
-                        if (Math.Sqrt((x - storage.objects[i].x) + (y - storage.objects[i].y)) <= storage.objects[i].R)
+                        if (Math.Sqrt(Math.Pow((x - storage.objects[i].x), 2) + Math.Pow((y - storage.objects[i].y), 2)) <= storage.objects[i].R)
                             return i;
                     }
             }
@@ -124,10 +124,10 @@ namespace Laba4_OOP_CCircle
                 {
                     int x = e.X - circle.R;
                     int y = e.Y - circle.R;
-                    for (int i=0; i<amtCells; ++i)
+                    for (int i=0; i < amtCells; ++i)
                         if (!storage.Empty(i))
                         {
-                            if (Math.Sqrt((x - storage.objects[i].x) + (y - storage.objects[i].y)) <= storage.objects[i].R)
+                            if (Math.Sqrt(Math.Pow((x - storage.objects[i].x), 2) + Math.Pow((y - storage.objects[i].y), 2)) <= storage.objects[i].R)
                             {
                                 storage.objects[i].color = SelectedColor;
                                 DrawingCircles(ref storage, i);
@@ -142,7 +142,7 @@ namespace Laba4_OOP_CCircle
                     for (int i=0; i<amtCells; ++i)
                         if(!storage.Empty(i))
                         {
-                            if (Math.Sqrt((x - storage.objects[i].x) + (y - storage.objects[i].y)) <= storage.objects[i].R)
+                            if (Math.Sqrt(Math.Pow((x - storage.objects[i].x), 2) + Math.Pow((y - storage.objects[i].y), 2)) <= storage.objects[i].R)
                             {
                                 storage.objects[i].color = SelectedColor;
                                 DrawingCircles(ref storage, i);
@@ -168,7 +168,7 @@ namespace Laba4_OOP_CCircle
 
         public class CCircle
         {
-            public int R = 50;
+            public int R = 75;
             public int x, y;
             public Color color = DefaultColor;
             public bool Is_Drawn = true;
